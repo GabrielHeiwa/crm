@@ -1,5 +1,6 @@
+import { Product } from "src/products/entities/product.entity";
 import { User } from "src/users/entities/user.entity";
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity({ name: "suppliers" })
 export class Supplier {
@@ -24,4 +25,7 @@ export class Supplier {
     @OneToOne(() => User)
     @JoinColumn({ name: "fk_user" })
     fkUser: User
+
+    @OneToMany(() => Product, product => product.fkSupplier)
+    products: Product[]
 }
