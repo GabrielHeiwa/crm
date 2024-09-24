@@ -1,3 +1,4 @@
+
 import { Product } from "src/products/entities/product.entity";
 import { User } from "src/users/entities/user.entity";
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
@@ -26,6 +27,6 @@ export class Supplier {
     @JoinColumn({ name: "fk_user" })
     fkUser: User
 
-    @OneToMany(() => Product, product => product.fkSupplier)
+    @OneToMany(() => Product, product => product.id)
     products: Product[]
 }

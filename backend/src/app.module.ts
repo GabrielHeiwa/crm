@@ -9,6 +9,7 @@ import { DigitalProductsModule } from './digital_products/digital_products.modul
 import { PhysicsProductsModule } from './physics_products/physics_products.module';
 import { ProductsListModule } from './products_list/products_list.module';
 import { NegotiationsModule } from './negotiations/negotiations.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { NegotiationsModule } from './negotiations/negotiations.module';
     DigitalProductsModule,
     PhysicsProductsModule,
     ProductsListModule,
-    NegotiationsModule
+    NegotiationsModule,
+    ProductsModule
   ],
   controllers: [],
   providers: [],
