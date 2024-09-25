@@ -1,1 +1,4 @@
-export class CreateProductsListDto {}
+export class CreateProductsListDto {
+    sequence: number;
+    fkProduct?: number;
+}
